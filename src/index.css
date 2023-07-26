@@ -102,7 +102,6 @@ body {
   .mobile-nav {
     width: 90%;
     height: 100vh;
-    /* background-color: #454545; */
     background-color: #191919;
     position: fixed;
     top: 70px;
@@ -237,7 +236,8 @@ body {
 @media screen and (max-width:650px) {
   .banner-info {
     position: absolute;
-    top: 0%;
+    bottom: 30%;
+    height: fit-content;
   }
   .banner {
     height: 500px;
@@ -417,6 +417,14 @@ img {
   }
   .moviesId-info > p {
     width: 100%;
+  }
+
+  .movie-list-container {
+    margin: 10px 20px;    
+  }
+
+  .m-link {
+    z-index: 1;
   }
 }
 
