@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -68,7 +68,7 @@ const MovieList = () => {
         <div className="movie-section">
           <div className="selection">
             <h1>Trending Movies</h1>
-            <Link to="/trending" className="m-link">
+            <Link to="/Trendings" className="m-link">
               View All
             </Link>
           </div>
@@ -92,7 +92,7 @@ const MovieList = () => {
         <div className="movie-section">
           <div className="selection">
             <h1>Top Rated Movies</h1>
-            <Link to="/top-rated" className="m-link">
+            <Link to="/Toprated" className="m-link">
               View All
             </Link>
           </div>
@@ -116,7 +116,7 @@ const MovieList = () => {
         <div className="movie-section">
           <div className="selection">
             <h1>Upcoming Movies</h1>
-            <Link to="/upcoming" className="m-link">
+            <Link to="/Upcoming" className="m-link">
               View All
             </Link>
           </div>
@@ -140,7 +140,7 @@ const MovieList = () => {
         <div className="movie-section">
           <div className="selection">
             <h1>Indian Movies</h1>
-            <Link to="/indian" className="m-link">
+            <Link to="/Indian" className="m-link">
               View All
             </Link>
           </div>
@@ -164,7 +164,7 @@ const MovieList = () => {
         <div className="movie-section">
           <div className="selection">
             <h1>Chinese Movies</h1>
-            <Link to="/chinese" className="m-link">
+            <Link to="/Chinese" className="m-link">
               View All
             </Link>
           </div>
@@ -188,7 +188,7 @@ const MovieList = () => {
         <div className="movie-section">
           <div className="selection">
             <h1>TV Series</h1>
-            <Link to="/tv-series" className="m-link">
+            <Link to="/TvSeries" className="m-link">
               View All
             </Link>
           </div>

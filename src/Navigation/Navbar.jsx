@@ -1,5 +1,5 @@
 import { Fragment,  useContext } from "react";
-import { Link , Outlet} from "react-router-dom";
+import { Link , Outlet, useNavigate} from "react-router-dom";
 import Auth from "../pages/auth";
 import Search from "../pages/Search";
 import CartItems from "../pages/cartItems";
@@ -15,9 +15,11 @@ const Navbar = () => {
            isMobile, setIsmobile,
             isCartOpen, setIsCartOpen} = 
            useContext(AuthContext)
-    
+    const navigate = useNavigate()
    
-
+    const handleNav = () => {
+        navigate('/')
+    }
     const handleOpenMenu = () => {
         setIsmobile(!isMobile)
         setSearch(false)
@@ -50,8 +52,7 @@ const Navbar = () => {
        <Fragment>
         <div className="navbar-container">
             
-                <img src="https://i.ibb.co/ZXmV9pt/Screenshot-2023-07-26-at-6-47-12-PM-removebg-preview.png" alt="logo"  />
-            
+                <img src="https://i.ibb.co/ZXmV9pt/Screenshot-2023-07-26-at-6-47-12-PM-removebg-preview.png" alt="logo" onClick={handleNav}  />
 
             <div className={isMobile ? "mobile-nav" : "nav-links"} onClick={() => setIsmobile(false)}>
                 <Link to='/' className="Link">Home</Link>
