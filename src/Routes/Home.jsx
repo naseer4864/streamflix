@@ -1,6 +1,7 @@
 import { useEffect, Fragment, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchTrendingMovies } from '../Redux/movieSlice';
+import MovieList from '../Routes/MovieList';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -41,6 +42,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <MovieList/>
     </Fragment>
   );
 };
