@@ -36,8 +36,6 @@ body {
 
 .logo > img {
   height: 65px;
-  margin-left: 5px;
-  background-color: pink;
 }
 
 .nav-links > .Link {
@@ -77,6 +75,7 @@ body {
   .navbar-container {
     justify-content: space-between;
   }
+  
 
   .mobile-menu {
     display: block;    
@@ -93,6 +92,7 @@ body {
   .logo > img {
     height: 50px;
   }
+
 
   .mobile-nav {
     width: 90%;
