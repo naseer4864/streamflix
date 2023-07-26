@@ -37,6 +37,7 @@ body {
 .logo > img {
   height: 65px;
   margin-left: 5px;
+  background-color: pink;
 }
 
 .nav-links > .Link {
