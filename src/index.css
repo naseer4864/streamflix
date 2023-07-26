@@ -236,7 +236,7 @@ body {
 @media screen and (max-width:650px) {
   .banner-info {
     position: absolute;
-    bottom: 30%;
+    top: 10%;
     height: fit-content;
   }
   .banner {
