@@ -49,10 +49,9 @@ const Navbar = () => {
     return ( 
        <Fragment>
         <div className="navbar-container">
-            <Link to='/' className="logo">
-                {/* <img src="https://i.ibb.co/4PhDDm9/Screenshot-2023-07-25-at-1-13-47-PM-removebg-preview.png" alt="logo" /> */}
-                <img src="https://i.ibb.co/ZXmV9pt/Screenshot-2023-07-26-at-6-47-12-PM-removebg-preview.png" alt="logo" />
-            </Link>
+            
+                <img src="https://i.ibb.co/ZXmV9pt/Screenshot-2023-07-26-at-6-47-12-PM-removebg-preview.png" alt="logo"  />
+            
 
             <div className={isMobile ? "mobile-nav" : "nav-links"} onClick={() => setIsmobile(false)}>
                 <Link to='/' className="Link">Home</Link>

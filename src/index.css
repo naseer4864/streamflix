@@ -34,7 +34,7 @@ body {
   z-index: 100;
 }
 
-.logo > img {
+.navbar-container > img {
   height: 65px;
   margin-left: 5px;
 }
@@ -90,8 +90,9 @@ body {
   }
 
 
-  .logo > img {
+  .navbar-container > img {
     height: 50px;
+    width: 150px;
   }
 
 
