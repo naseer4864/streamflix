@@ -4,7 +4,6 @@ import Navbar from "./Navigation/Navbar";
 import Home from "./Routes/Home";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
-import Profile from "./Routes/Profile";
 import MovieDetail from "./pages/MoviesDetails";
 import Trendings from "./Routes/Trendings"
 import Toprated from "./Routes/Toprated";
@@ -31,7 +30,6 @@ function App() {
       <Route path="/Popular" element={<Popular/>}/>
       <Route path="/Register" element={<Register/>}/>
       <Route path="/Login" element={<Login/>}/>
-      <Route path="/Profile" element={<Profile/>}/>
       <Route path="/movie/:id" element={<MovieDetail />} />
       <Route path="/Trendings" element={<Trendings/>}/>
       <Route path="/Toprated" element={<Toprated/>}/>

@@ -1,18 +1,20 @@
-import { Fragment, useContext } from "react";
+import React, { Fragment, useState } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
-
-
-
-
-import { AuthContext } from "../Context/auth-Context";
+import { useSelector } from "react-redux";
+import Profile from "../Routes/Profile";
 
 const Navbar = () => {
-  const { isLoggedIn } = useContext(AuthContext);
-
   const navigate = useNavigate();
+  const [showProfile, setShowProfile] = useState(false); // State variable to toggle Profile component
 
   const handleNav = () => {
     navigate("/");
+  };
+
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+
+  const handleProfileIconClick = () => {
+    setShowProfile(!showProfile); // Toggle the value of showProfile when the icon is clicked
   };
 
   return (
@@ -30,24 +32,20 @@ const Navbar = () => {
           <Link to="/Popular" className="Link">
             Popular
           </Link>
-          {
-            isLoggedIn ? (
-
-          <Link to="/Profile" className="Link">
-            Profile
-          </Link>
-            ) : (
-
-          <Link to="/Login" className="Link">
-            Login
-          </Link>
-            )
-          }
+          {isAuthenticated ? (
+            <i className="fa-solid fa-user" onClick={handleProfileIconClick}></i>
+          ) : (
+            <Link to="/Login" className="Link">
+              Login
+            </Link>
+          )}
         </div>
+      {showProfile && <Profile />}
       </div>
-      <Outlet />
+      <Outlet/>
     </Fragment>
   );
 };
 
 export default Navbar;
+

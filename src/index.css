@@ -35,6 +35,11 @@ body {
   z-index: 100;
 }
 
+.fa-solid {
+  color: white;
+  margin-right: 10px;
+}
+
 .navbar-container > img {
   height: 65px;
   margin-left: 100px;
@@ -62,7 +67,7 @@ body {
 
 @media screen and (max-width:650px) {
   .navbar-container > img {
-    height: 50px;
+    height: 40px;
     width: 150px;
     margin: 0%;
   }
@@ -512,4 +517,47 @@ img {
 
 .Spinner-container > img {
   height: 100px;
+}
+
+
+.profile-container {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 70px;
+  right: 1%;
+  background-color: rgba(15, 15, 15, 0.7);
+  border-radius: 5px;
+}
+
+.profile-card {
+  width: 100%;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-card > h2 {
+  color: white;
+  margin: 10px;
+}
+
+.profile-card > h4 {
+  color: white;
+}
+
+.profile-card > button {
+  width: 50%;
+  height: 35px;
+  background-color: #E30714;
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  margin: 15px;
+  outline: none;
+
 }

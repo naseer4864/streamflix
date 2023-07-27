@@ -11,7 +11,6 @@ const MovieDetail = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // If the movie details are not available in the Redux store, fetch them from the API
     if (!movieDetails || movieDetails.id !== parseInt(id)) {
       dispatch(fetchMovieById(id));
     }
@@ -37,7 +36,6 @@ const MovieDetail = () => {
         <button>+ Playlist</button>
         </div>
     </div>
-    {/* <Footer/> */}
         </Fragment>
   );
 };
