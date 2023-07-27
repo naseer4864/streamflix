@@ -28,7 +28,7 @@ const MovieDetail = () => {
         />
         <div className="moviesId-info">
         <h1>{movieDetails.title}</h1>
-        <h3>Duration : {movieDetails.runtime} minutes</h3>
+        <h3>Duration : {movieDetails.runtime}</h3>
         <h4>Released: {movieDetails.release_date}</h4>
         <span>TAGS: {movieDetails.genres.map((genre) => genre.name).join(', ')}</span>
         <p>{movieDetails.overview}</p>
