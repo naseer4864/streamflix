@@ -3,8 +3,8 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import convertMinutesToHoursAndMinutes from '../pages/Runtime';
 
-const API_KEY = 'f7a7c7a6b9099c9838bf9c622a5e3b62';
-const API_URL = 'https://api.themoviedb.org/3';
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 export const fetchTrendingMovies = createAsyncThunk('movies/fetchTrendingMovies', async () => {
