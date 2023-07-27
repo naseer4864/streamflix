@@ -101,7 +101,6 @@ const movieSlice = createSlice({
     tvSeries: [],
     currentMovieIndex: 0,
     movieDetails: null,
-    playlists: [],
 
   },
   reducers: {},

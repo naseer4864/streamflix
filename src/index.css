@@ -38,6 +38,7 @@ body {
 .fa-solid {
   color: white;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .navbar-container > img {
@@ -553,7 +554,7 @@ img {
 .profile-card > button {
   width: 50%;
   height: 35px;
-  background-color: #E30714;
+  background-color: rgba(242, 25, 25, 0.5);
   color: white;
   cursor: pointer;
   border: 1px solid white;
