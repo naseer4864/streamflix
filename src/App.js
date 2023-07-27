@@ -1,13 +1,10 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 import Navbar from "./Navigation/Navbar";
 import Home from "./Routes/Home";
-import Genres from "./Routes/Genres";
-import Shop from "./Routes/Shop";
-import Contact from "./Routes/Contact";
 import Register from "./Auth/Register";
 import Login from "./Auth/Login";
-import CartItems from "./pages/cartItems";
+import Profile from "./Routes/Profile";
 import MovieDetail from "./pages/MoviesDetails";
 import Trendings from "./Routes/Trendings"
 import Toprated from "./Routes/Toprated";
@@ -15,23 +12,26 @@ import Upcoming from "./Routes/Upcoming";
 import Indian from "./Routes/Indian";
 import Chinese from "./Routes/Chinese";
 import TvSeries from "./Routes/Tvseries";
+import Popular from "./Routes/Popular";
+import Footer from "./Routes/Footer";
 
 
 function App() {
+
   const Location = useLocation()
   useEffect(() => {
     window.scrollTo(0,0)
   },[Location])
+
   return (
+    <Fragment>
    <Routes>
     <Route path="/" element={<Navbar/>}>
       <Route index element={<Home/>}/>
-      <Route path="/Genres" element={<Genres/>}/>
-      <Route path="/Contact" element={<Contact/>}/>
-      <Route path="/Shop" element={<Shop/>}/>
+      <Route path="/Popular" element={<Popular/>}/>
       <Route path="/Register" element={<Register/>}/>
       <Route path="/Login" element={<Login/>}/>
-      <Route path="/CartItems" element={<CartItems/>}/>
+      <Route path="/Profile" element={<Profile/>}/>
       <Route path="/movie/:id" element={<MovieDetail />} />
       <Route path="/Trendings" element={<Trendings/>}/>
       <Route path="/Toprated" element={<Toprated/>}/>
@@ -41,6 +41,8 @@ function App() {
       <Route path="/TvSeries" element={<TvSeries/>}/>
     </Route>
    </Routes>
+   <Footer/>
+    </Fragment>
   );
 }
 

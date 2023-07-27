@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMovieById } from '../Redux/movieSlice';
+
 
 
 const MovieDetail = () => {
@@ -21,6 +22,7 @@ const MovieDetail = () => {
   }
 
   return (
+    <Fragment>
     <div className='moviesId-container'>
       <img
         src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`}
@@ -35,8 +37,9 @@ const MovieDetail = () => {
         <button>+ Playlist</button>
         </div>
     </div>
+    {/* <Footer/> */}
+        </Fragment>
   );
 };
 
 export default MovieDetail;
-

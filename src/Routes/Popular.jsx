@@ -1,13 +1,13 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchTrendingMovies } from "../Redux/movieSlice";
-import convertMinutesToHoursAndMinutes from "../pages/Runtime";
+import  { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchTrendingMovies } from '../Redux/movieSlice';
+import { Link } from 'react-router-dom';
+import convertMinutesToHoursAndMinutes from '../pages/Runtime';
 
 
-const Trendings = () => {
-  const dispatch = useDispatch();
+const PopularMovies = () => {
   const trendingMovies = useSelector((state) => state.movies.trendingMovies);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchTrendingMovies());
@@ -16,7 +16,7 @@ const Trendings = () => {
   return (
     <div className="mother-container">
       <img src="https://i.ibb.co/Ph5nh49/pexels-cottonbro-studio-7299586.jpg" alt="" />
-      <h1>TRENDINGS MOVIES</h1>
+      <h1>POPULAR MOVIES</h1>
     <div className="viewall-container">
       {trendingMovies.map((movie) => (
           <div key={movie.id} className="viewall-card">
@@ -34,4 +34,4 @@ const Trendings = () => {
   );
 };
 
-export default Trendings;
+export default PopularMovies;

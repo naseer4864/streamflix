@@ -71,6 +71,7 @@ export const fetchChineseMovies = createAsyncThunk('movies/fetchChineseMovies', 
   return moviesWithRuntime;
 });
 
+
 export const fetchTvSeries = createAsyncThunk('movies/fetchTvSeries', async () => {
   const response = await axios.get(`${API_URL}/tv/popular?api_key=${API_KEY}`);
   const series = response.data.results;
@@ -87,7 +88,8 @@ export const fetchMovieById = createAsyncThunk('movies/fetchMovieById', async (m
     const movie = response.data;
     return { ...movie, runtime: convertMinutesToHoursAndMinutes(movie.runtime)  };
   });
-
+  
+  
 const movieSlice = createSlice({
   name: 'movies',
   initialState: {
@@ -99,6 +101,7 @@ const movieSlice = createSlice({
     tvSeries: [],
     currentMovieIndex: 0,
     movieDetails: null,
+    playlists: [],
 
   },
   reducers: {},
